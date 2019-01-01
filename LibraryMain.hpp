@@ -1,5 +1,4 @@
 #define LOGD(LOGTYPE, ...) Log::Debug(LOGTYPE, __FILE__, __LINE__, __VA_ARGS__)
-#define USE_LOGGER_INIT
 
 class Log {
 public:
