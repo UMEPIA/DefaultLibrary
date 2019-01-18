@@ -1,16 +1,14 @@
 #include "Logs.hpp"
+#include "stdafx.h"
 
-#include <iostream>
-#include <string>
-#include <cstdio>
 #include <stdarg.h>
-#include "qstring.h"
 #include <Windows.h>
 #include <time.h>
 /*
 	TODO: Recode 부분 -> 파일에 기록 + 디버그 출력 동시에 하는 기능 추가
 */
-void Log::Debug(const char* LOGTYPE, const char* fileName, int codeLine, const char* format, ...) {
+void Log::Debug(const char* LOGTYPE, const char* fileName, int codeLine, const char* format, ...) 
+{
 	char message[1024] = { 0, };
 
 	va_list lpStart;
@@ -29,7 +27,8 @@ void Log::Debug(const char* LOGTYPE, const char* fileName, int codeLine, const c
 	OutputDebugStringA(messagePrint);
 }
 
-void Log::Recode(const char* LOGTYPE, const char* fileName, int codeLine, const char* format, ...) {
+void Log::Recode(const char* LOGTYPE, const char* fileName, int codeLine, const char* format, ...) 
+{
 	char message[1024] = { 0, };
 
 	va_list lpStart;
