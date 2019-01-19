@@ -1,8 +1,8 @@
 #define DECLARE_COMMON_LIBRARY \
 		USE_LOGGER_INIT \
-        //USE_LIBLALY_MAIN \
+        USE_LIBLALY_FORMATTER
 
-//#define USE_LIBLALY_MAIN using namespace Lib::LibMain;
+#define USE_LIBLALY_FORMATTER using namespace fmt;
 
 #ifdef USE_LOGGER_INIT
 const char* LOGGING_TYPE_VERBOSE       = "VERBOSE";

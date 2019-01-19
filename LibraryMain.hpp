@@ -1,10 +1,16 @@
 #include "LibBase.hpp"
 
-class Library
+namespace Library
 {
-    public:
-        Library();
-        ~Library();
-        QString GetcurrentPath();
-    private:
-};
+    namespace Main
+    {
+        class Library
+        {
+        public:
+            Library();
+            ~Library();
+            QString GetcurrentPath();
+        private:
+        };
+    }
+}
